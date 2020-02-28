@@ -18,4 +18,4 @@
 
 **NOTE:** If dont have permission to run, please run:
 
-`sudo chmod +x <file_need_to_run>`
+`sudo chmod +x <path_file_need_to_run>`
