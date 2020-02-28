@@ -1,0 +1,28 @@
+{
+  "name": "parking_lot",
+  "version": "1.0.0",
+  "description": "Create parking lot",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "./node_modules/.bin/nyc npm run test:all",
+    "test:only": "./node_modules/.bin/mocha",
+    "test:all": "./node_modules/.bin/mocha ./**/__test__/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HiImNVM/parkingLot.git"
+  },
+  "author": "DuyDLam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HiImNVM/parkingLot/issues"
+  },
+  "homepage": "https://github.com/HiImNVM/parkingLot#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
+    "sinon": "^9.0.0"
+  }
+}
