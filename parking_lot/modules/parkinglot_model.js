@@ -1,9 +1,17 @@
+const {
+    isString,
+} = require('util');
 
-
-const validInitParkinglotParam = (slotNumber) => {
-    if (!slotNumber) {
+const validInitParkinglotParam = (slotTotal) => {
+    if (!slotTotal) {
         return {
             error: 'Slot is null or empty. Please check again!',
+        };
+    }
+
+    if (!isString(slotTotal)) {
+        return {
+            error: 'Slot is not string. Please check again!',
         };
     }
 
@@ -16,6 +24,12 @@ const validParkNewCarParam = (carNumber) => {
     if (!carNumber) {
         return {
             error: 'Car number is null or empty. Please check again!',
+        };
+    }
+
+    if (!isString(carNumber)) {
+        return {
+            error: 'Car number is not string. Please check again!',
         };
     }
 
@@ -34,6 +48,18 @@ const validLeaveCarParams = (carNumber, parkedHour) => {
     if (!parkedHour) {
         return {
             error: 'Parked hour is null or empty. Please check again!',
+        };
+    }
+
+    if (!isString(carNumber)) {
+        return {
+            error: 'Car number is not string. Please check again!',
+        };
+    }
+
+    if (!isString(parkedHour)) {
+        return {
+            error: 'Parked hour is not string. Please check again!',
         };
     }
 

@@ -9,10 +9,10 @@ const {
 /**
  * Read content of text file with fileName
  * 
- * @param {String} fileName Name of file\
+ * @param {String} fileName Name of file
  */
 const readTextFile = (fileName) => {
-    if (!fileName) {
+    if (!fileName || !isString(fileName)) {
         return null;
     }
 
