@@ -25,6 +25,14 @@ describe('readTextFile', () => {
         expect(content).to.be.null;
     });
 
+    it('should return null value when fileName is not string', () => {
+        const fileNameValue = 1;
+
+        const content = readTextFile(fileNameValue);
+
+        expect(content).to.be.null;
+    });
+
     it('should call function once', () => {
         const fileNameValue = 'data.txt';
         const mockContent = null;
@@ -34,6 +42,18 @@ describe('readTextFile', () => {
         readTextFile(fileNameValue);
 
         expect(readFileSyncStub.calledOnceWith(fileNameValue)).to.be.true;
+    });
+
+
+    it('should call function once', () => {
+        const fileNameValue = 'data.txt';
+        const mockError = new Error('Cant read file');
+
+        readFileSyncStub.throws(mockError);
+
+        const content = readTextFile(fileNameValue);
+
+        expect(content).to.be.null;
     });
 
     it('should return string value when contentFile is not null', () => {
