@@ -19,3 +19,5 @@
 **NOTE:** If dont have permission to run, please run:
 
 `sudo chmod +x <path_file_need_to_run>`
+
+Example:  `# sudo chmod +x ./parking_lot.sh`
